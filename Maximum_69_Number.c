@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 int dc(int n)
 {
     int r,k=0;
@@ -13,10 +14,11 @@ int dc(int n)
 }
 int main()
 {
-    int n,r;
+    int n;
     scanf("%d",&n);
-    int k=dc(n);
-    int x[k];
+    int m=n,k;
+    k=dc(n);
+    int x[k],r;
     for(int i=k-1;i>=0;i--)
     {
         r=n%10;
