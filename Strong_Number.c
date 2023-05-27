@@ -6,7 +6,6 @@ int fact(int n)
     for(int i=1;i<=n;i++)
     {
         f=f*i;
-        
     }
     return f;
 }
@@ -22,8 +21,10 @@ int main()
         s=s+fact(r);
         n=n/10;
     }
-    if(m==s)
-    printf("The number %d is a strong number",m);
+    if(s==m)
+    {
+        printf("The number %d is a strong number",m);
+    }
     else
     {
         printf("The number %d is not a strong number",m);
