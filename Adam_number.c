@@ -14,16 +14,13 @@ int main()
 {
     int n;
     scanf("%d",&n);
+    int r=rev(n);
     int p1=n*n;
-    int r1=rev(n);
-    int p2=r1*r1;
-    int r2=rev(p2);
-    if(r2==p1)
+    int p2=r*r;
+    if(rev(p2)==p1)
     {
         printf("True");
     }
     else
-    {
-        printf("False");
-    }
+    printf("False");
 }
