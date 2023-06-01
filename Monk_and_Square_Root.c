@@ -4,21 +4,23 @@ int main()
 {
     int t;
     scanf("%d",&t);
-    for(int k=1;k<=t;k++)
+    
+    for(int i=1;i<=t;i++)
     {
-        long long int n,m,v=0;
-        scanf("%lld%lld",&n,&m);
-        for(long long int i=0;i<m;i++)
+        long long int a,b;
+        scanf("%lld%lld",&a,&b);
+        int k=0;
+        for(long long int j=0;j<b;j++)
         {
-            if((i*i)%m==n)
+            if(j*j%b==a)
             {
                 printf("%lld
-",i);
-                v++;
+",j);
+                k++;
                 break;
             }
         }
-        if(v==0)
+        if(k==0)
         {
             printf("-1
 ");
