@@ -4,7 +4,7 @@
 int prime(int n)
 {
     int k=0;
-    for(int i=1;i<=n/2;i++)
+	for(int i=1;i<=n/2;i++)
     {
         if(n%i==0)
         {
@@ -14,7 +14,6 @@ int prime(int n)
     if(k==1)
     {
         return 1;
-        
     }
     else
     {
@@ -24,35 +23,37 @@ int prime(int n)
 
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    if(prime(n))
-    {
-        printf("0");
-    }
-    else
-    {
-        int lt,rt,d1,d2;
-        for(int j=n+1;;j++)
+    
+        int n,min,d1,d2;
+        scanf("%d",&n);
+        int rp,lp;
+        if(prime(n))
         {
-            if(prime(j))
-            {
-                rt=j;
-                d1=rt-n;
-                break;
-            }
-            
+            printf("0");
+
         }
-        for(int j=n-1;;j--)
+        else
         {
-            if(prime(j))
+			for(int j=n+1;;j++)
             {
-                lt=j;
-                d2=n-j;
-                break;
+                if(prime(j))
+                {
+                    rp=j;
+                    d1=j-n;
+                    break;
+                }
             }
+            for(int j=n-1;;j--)
+            {
+                if(prime(j))
+                {
+                    lp=j;
+                    d2=n-j;
+                    break;
+                }
+            }
+            min=d1<d2?d1:d2;
+            printf("%d
+",min);
         }
-        int min=d1<d2?d1:d2;
-        printf("%d",min);
-    }
 }
