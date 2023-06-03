@@ -1,4 +1,4 @@
-#include<stdio.h>
+		#include<stdio.h>
 
 int dc(int n)
 {
