@@ -4,15 +4,17 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int r,mx=n%10;
+    int r,max=n%10;
     n=n/10;
-    while(n>0) {
+    while(n>0)
+    {
         r=n%10;
-        if(r>mx) {
-            mx=r;
+        if(r>max)
+        {
+            max=r;
         }
-        n/=10;
+        n=n/10;
+        
     }
-    printf("%d",mx);
-
+    printf("%d",max);
 }
