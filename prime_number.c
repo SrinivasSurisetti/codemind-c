@@ -7,14 +7,12 @@ int main()
     {
         if(n%i==0)
         {
-            c++;
-            
+            c=c+1;
         }
     }
     if(c==2)
     {
         printf("prime");
-        
     }
     else
     {
