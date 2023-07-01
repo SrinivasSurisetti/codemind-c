@@ -1,14 +1,13 @@
 #include<stdio.h>
-int main()
-{
-    int a=0,b=1,c,n,i;
+int main() {
+    int n;
     scanf("%d",&n);
-    printf("0 1 ");
-    for(i=0;i<n-2;i++)
-    {
-        c=a+b;
-        printf("%d ",c);
-        a=b;
-        b=c;
+    int f[n],i;
+	f[0] = 0;
+	f[1] = 1;
+	printf("0 1 ");
+	for (i=2 ; i<n ;i++) {
+		f[i] = f[i-1] + f[i-2];
+	printf("%d ",f[i]);
     }
 }
